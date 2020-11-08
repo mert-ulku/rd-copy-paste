@@ -1,28 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+
+    <TextArea/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 
-export default {
-  name: "App",
-  components: {
-    HelloWorld
+  import TextArea from './components/TextArea'
+
+  export default {
+    name: "App",
+    components: {
+      TextArea
+    }
   }
-};
+
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  * {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+
+  body, html, #app {
+
+    height: 100%;
+    font-family: Poppins, sans-serif;
+
+  }
+
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+
+    background-color: #4cb04f;
+    padding: 5px 10px;
+    border: 1px solid #4cb04f;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+
+      background-color: #fff;
+      color: #4cb04f
+
+    }
+
+  } 
+
 </style>
